@@ -10,5 +10,15 @@ body {
 
 nav.navbar {
     padding: 1rem 3rem;
-    background-color: rgb(107, 179, 155);
+    background-color: rgb(28, 52, 44);
+}
+
+a.language-toggler {
+    text-decoration: underline;
+}
+
+a.nav-link.btn.btn-primary {
+    background-color: black;
+    border-color: black;
+    border-radius: 20px;
 }

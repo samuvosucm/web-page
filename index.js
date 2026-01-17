@@ -16,10 +16,16 @@ app.use(session({
     saveUninitialized: false
 }));
 
-
-
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.redirect('/en/');  // default to English
+});
+
+const routes = require('./routes/index');
+
+app.use('/', routes);
 
 app.listen(PORT, () => {
     console.log(`EcoMarket EXAM app running at http://localhost:${PORT}`);
