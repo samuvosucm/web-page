@@ -1,6 +1,15 @@
 :root {
     --font-family: 'Montserrat', sans-serif;
     --font-weight: 500;
+    --font-weight-title: 700;
+
+    /* colors */
+    --color-navbar: black;
+    --color-navbar-button: rgb(236, 163, 15);
+
+    --color-secondary: rgba(236, 162, 15, 0.256);
+    --color-card-hover: rgba(236, 162, 15, 0.651);
+
 }
 
 body {
@@ -8,9 +17,14 @@ body {
     font-weight: var(--font-weight);
 }
 
+h1,
+h5 {
+    font-weight: var(--font-weight-title);
+}
+
 nav.navbar {
     padding: 1rem 3rem;
-    background-color: rgb(28, 52, 44);
+    background-color: var(--color-navbar);
 }
 
 a.language-toggler {
@@ -18,7 +32,48 @@ a.language-toggler {
 }
 
 a.nav-link.btn.btn-primary {
-    background-color: black;
-    border-color: black;
+    background-color: var(--color-navbar-button);
+    font-weight: var(--font-weight);
+    border-color: var(--color-navbar-button);
     border-radius: 20px;
+}
+
+a.nav-link {
+    color: white !important;
+}
+
+/* service */
+
+.container-fluid.card-service-container {
+    background-color: var(--color-secondary);
+    padding: 2em;
+    width: 100%;
+}
+
+.card.service-card {
+    border: none;
+    border-radius: 8px;
+    height: 90vh;
+    overflow: hidden;
+    transition: transform 0.2s ease, background-color 0.4s ease;
+    max-width: 300px;
+}
+
+.card.service-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-card-hover);
+}
+
+
+.card.service-card .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.card-img-wrapper {
+    padding: 0.8em;
+    border-radius: 8px;
 }
